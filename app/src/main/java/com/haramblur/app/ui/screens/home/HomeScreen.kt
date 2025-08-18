@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -44,6 +47,9 @@ fun HomeScreen(
     contentPadding: PaddingValues = PaddingValues(0.dp),
     modifier: Modifier = Modifier
 ) {
+    val viewModel: HomeViewModel = hiltViewModel()
+    val statusState = viewModel.status.collectAsState()
+    LaunchedEffect(Unit) { viewModel.refreshStatus() }
     // State for protection toggle
     val protectionState = remember { 
         mutableStateOf(ProtectionState.ACTIVE) 
