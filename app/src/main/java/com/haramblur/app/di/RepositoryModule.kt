@@ -27,22 +27,21 @@ abstract class RepositoryModule {
         settingsRepositoryImpl: SettingsRepositoryImpl
     ): SettingsRepository
     
-    // TODO: Add other repository bindings as they are implemented
-    // @Binds
-    // @Singleton
-    // abstract fun bindBlockedSiteRepository(
-    //     blockedSiteRepositoryImpl: BlockedSiteRepositoryImpl
-    // ): BlockedSiteRepository
+    @Binds
+    @Singleton
+    abstract fun bindBlockedSiteRepository(
+        blockedSiteRepositoryImpl: BlockedSiteRepositoryImpl
+    ): BlockedSiteRepository
     
-    // @Binds
-    // @Singleton
-    // abstract fun bindIslamicReminderRepository(
-    //     islamicReminderRepositoryImpl: IslamicReminderRepositoryImpl
-    // ): IslamicReminderRepository
+    @Binds
+    @Singleton
+    abstract fun bindIslamicReminderRepository(
+        islamicReminderRepositoryImpl: IslamicReminderRepositoryImpl
+    ): IslamicReminderRepository
     
-    // @Binds
-    // @Singleton
-    // abstract fun bindCodeRedRepository(
-    //     codeRedRepositoryImpl: CodeRedRepositoryImpl
-    // ): CodeRedRepository
+    @Binds
+    @Singleton
+    abstract fun bindCodeRedRepository(
+        codeRedRepositoryImpl: CodeRedRepositoryImpl
+    ): CodeRedRepository
 }

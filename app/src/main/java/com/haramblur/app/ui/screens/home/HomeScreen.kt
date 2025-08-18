@@ -8,11 +8,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.haramblur.app.ui.util.WindowSizeClass
 import com.haramblur.app.ui.util.WindowWidthSizeClass
 import com.haramblur.app.ui.components.CodeRedAlertCard
@@ -23,6 +24,7 @@ import com.haramblur.app.ui.components.ProtectionStatusCard
 import com.haramblur.app.ui.components.TodayProtectionCard
 import com.haramblur.app.ui.theme.HaramBlurTheme
 import com.haramblur.app.ui.theme.Spacing
+import com.haramblur.app.presentation.viewmodel.HomeViewModel
 
 /**
  * Home screen of the application
@@ -42,11 +44,18 @@ fun HomeScreen(
     navigateToNotifications: () -> Unit = {},
     windowSizeClass: WindowSizeClass? = null,
     contentPadding: PaddingValues = PaddingValues(0.dp),
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: HomeViewModel = hiltViewModel()
 ) {
-    // State for protection toggle
-    val protectionState = remember { 
-        mutableStateOf(ProtectionState.ACTIVE) 
+    // Collect state from ViewModel
+    val settings by viewModel.settings.collectAsState()
+    val uiState by viewModel.uiState.collectAsState()
+    
+    // Convert settings to protection state
+    val protectionState = if (settings.protectionEnabled) {
+        ProtectionState.ACTIVE
+    } else {
+        ProtectionState.INACTIVE
     }
     
     // Determine layout based on screen size
@@ -74,9 +83,9 @@ fun HomeScreen(
             ) {
                 // Protection Status Card
                 ProtectionStatusCard(
-                    state = protectionState.value,
+                    state = protectionState,
                     onToggleProtection = { isActive ->
-                        protectionState.value = if (isActive) ProtectionState.ACTIVE else ProtectionState.INACTIVE
+                        viewModel.toggleProtection()
                     }
                 )
                 
