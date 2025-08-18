@@ -1,16 +1,14 @@
-# How to Generate APK for HaramBlur
+# HaramBlur APK
 
-Follow these steps to generate an APK file that you can share with your friends:
+## Ready-to-Use APK
 
-## Using Android Studio
+The APK has been successfully generated and is ready to use. You can find it at:
 
-1. Open the project in Android Studio
-2. From the menu, select **Build** > **Build Bundle(s) / APK(s)** > **Build APK(s)**
-3. Wait for the build process to complete
-4. Android Studio will show a notification when the build is finished
-5. Click on the "locate" link in the notification to find your APK file
-6. The APK will be located at: `app/build/outputs/apk/debug/app-debug.apk`
-7. Share this APK file with your friends
+```
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+This APK file is ready to be shared with your friends. Simply copy it from this location and share it via email, messaging apps, or file sharing services.
 
 ## Using Command Line (Alternative)
 
