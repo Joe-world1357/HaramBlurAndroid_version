@@ -35,7 +35,9 @@ import com.haramblur.app.ui.util.WindowWidthSizeClass
 import com.haramblur.app.ui.util.animatedComposable
 import com.haramblur.app.ui.util.navigateWithAnimation
 import com.haramblur.app.ui.util.rememberWindowSizeClass
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

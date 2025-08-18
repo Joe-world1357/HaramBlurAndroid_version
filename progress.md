@@ -70,17 +70,29 @@ This phase focused on adding advanced features and final polish:
 
 ### 📌 Next Steps (Transition to Task 2 – Functionality)
 
-#### Phase 1: Basic Functionality
-- Implement content detection algorithms
-- Create blur/filter mechanisms for detected content
-- Set up local storage for user preferences
-- Implement basic app locking functionality
+## Task 2 – Functionality
 
-#### Phase 2: Core Logic
-- Develop real-time content analysis
-- Implement website blocking mechanisms
-- Create CODE RED emergency locking system
-- Set up Islamic reminders integration
+### ✅ Phase 1: Core Setup – COMPLETED
+- **Architecture**: Established MVVM structure with clear `ui` (Compose), `data` (remote/local), and `di` modules.
+- **Dependency Injection**: Integrated Hilt with `@HiltAndroidApp` `HaramBlurApp`, `@AndroidEntryPoint` `MainActivity`, and DI modules in `com.haramblur.app.di`.
+- **Networking**: Configured Retrofit + OkHttp + Moshi with logging. Added `SampleApi` as a placeholder endpoint and `Retrofit` provider.
+- **Database**: Initialized Room database scaffold `HaramBlurDatabase` (entities to be added in later phases) with a provider.
+- **Repositories**: Added `SampleRepository` to demonstrate repository pattern and API usage.
+- **Coroutines**: Added Kotlin Coroutines for async operations.
+- **Unit Tests**: Added tests for `NetworkModule` providers and `SampleRepository` using `MockWebServer`.
+- **Compose + Hilt**: Wired `HomeViewModel` with `hiltViewModel()` for future feature integration.
+
+Notes: CI builds require Android SDK. To build locally, set `sdk.dir` in `local.properties` or set `ANDROID_HOME`. Unit tests compile once SDK is available.
+
+### 🟢 Phase 2: Basic Functional Features – STARTING NEXT
+- Connect primary UI actions to ViewModels and repositories.
+- Implement basic validation and surface error/loading states.
+- Prepare initial local models/entities and DAOs in Room.
+- Add navigation-triggered actions (e.g., refresh, status checks) and smoke tests.
+
+#### Upcoming (Phase 3 & 4 – Next Steps)
+- Phase 3: Advanced business logic, background work, and persistence flows.
+- Phase 4: Integration polish, performance, offline-first improvements, and end-to-end tests.
 
 ### 💡 Recommendations
 
