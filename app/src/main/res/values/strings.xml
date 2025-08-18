@@ -36,4 +36,7 @@
     <string name="islamic_reminder">🕌 Islamic Reminder</string>
     <string name="islamic_quote">\"Say to the believing men that they should lower their gaze\"</string>
     <string name="islamic_source">Quran 24:30</string>
+    
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_description">HaramBlur uses this service to monitor app launches and enforce CODE RED app locking. This service helps protect your digital well-being by preventing access to locked apps during active sessions.</string>
 </resources>
