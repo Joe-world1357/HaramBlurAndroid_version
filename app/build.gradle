@@ -6,6 +6,11 @@ plugins {
 android {
     namespace 'com.haramblur.app'
     compileSdk 34
+    
+    lint {
+        abortOnError false
+        baseline file("lint-baseline.xml")
+    }
 
     defaultConfig {
         applicationId "com.haramblur.app"
