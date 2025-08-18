@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">HaramBlur</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_code_red">CODE RED</string>
+    
+    <!-- Home Screen -->
+    <string name="protection_active">Protection is ACTIVE</string>
+    <string name="protection_inactive">Protection is OFF</string>
+    <string name="protection_setup_needed">Setup Required</string>
+    <string name="protection_monitoring">Real-time monitoring enabled</string>
+    <string name="protection_tap_enable">Tap to enable protection</string>
+    <string name="protection_risk">Your privacy is at risk</string>
+    <string name="protection_missing_permissions">Missing permissions</string>
+    <string name="protection_complete_setup">COMPLETE SETUP</string>
+    <string name="protection_detections">%1$d detections today</string>
+    <string name="protection_active_time">Active for %1$s</string>
+    
+    <!-- CODE RED -->
+    <string name="code_red_emergency">🚨 CODE RED EMERGENCY</string>
+    <string name="code_red_app_lock">🚨 Emergency App Lock</string>
+    <string name="code_red_description">Lock distracting apps instantly</string>
+    <string name="code_red_activate">ACTIVATE CODE RED</string>
+    
+    <!-- Protection Stats -->
+    <string name="today_protection">Today\'s Protection</string>
+    <string name="content_blocked">%1$d Content Blocked</string>
+    <string name="websites_blocked">%1$d Websites Blocked</string>
+    <string name="apps_locked">%1$d Apps Currently Locked</string>
+    <string name="view_details">View Details ></string>
+    
+    <!-- Islamic Reminder -->
+    <string name="islamic_reminder">🕌 Islamic Reminder</string>
+    <string name="islamic_quote">\"Say to the believing men that they should lower their gaze\"</string>
+    <string name="islamic_source">Quran 24:30</string>
+</resources>

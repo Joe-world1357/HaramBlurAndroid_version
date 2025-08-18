@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="islamic_green">#FF006B3C</color>
+    <color name="pure_white">#FFFFFFFF</color>
+    <color name="deep_black">#FF000000</color>
+    <color name="soft_gray">#FFF5F5F5</color>
+    <color name="light_gray">#FFE0E0E0</color>
+    
+    <!-- CODE RED Colors -->
+    <color name="alert_red">#FFD32F2F</color>
+    <color name="dark_red">#FFB71C1C</color>
+    <color name="light_red">#FFFFEBEE</color>
+    <color name="emergency_orange">#FFFF5722</color>
+    
+    <!-- Status Colors -->
+    <color name="success_green">#FF4CAF50</color>
+    <color name="warning_amber">#FFFFC107</color>
+    <color name="error_red">#FFF44336</color>
+    <color name="info_blue">#FF2196F3</color>
+    
+    <!-- Dark Theme Colors -->
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="on_dark_background">#FFFFFFFF</color>
+    <color name="on_dark_surface">#FFE0E0E0</color>
+    <color name="dark_code_red">#FFFF6B6B</color>
+</resources>
